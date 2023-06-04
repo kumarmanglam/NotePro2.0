@@ -1,0 +1,45 @@
+.text-xs {
+  /* 12px */
+  font-size: 0.75rem;
+}
+.text-sm {
+  /* 14px */
+  font-size: 0.875rem;
+}
+.text-base {
+  /* 16px */
+  font-size: 1rem;
+}
+.text-lg {
+  /* 20px */
+  font-size: 1.25rem;
+}
+.text-xl {
+  /* 24px */
+  font-size: 1.5rem;
+}
+.text-2xl {
+  /* 28px */
+  font-size: 1.75rem;
+}
+.text-3xl {
+  /* 32px */
+  font-size: 2rem;
+}
+/* fontweight */
+.font-normal {
+  font-weight: 500;
+}
+.font-medium {
+  font-weight: 600;
+}
+.font-semi-bold {
+  font-weight: 700;
+}
+.font-bold {
+  font-weight: 800;
+}
+
+.inline-block {
+  display: inline-block;
+}

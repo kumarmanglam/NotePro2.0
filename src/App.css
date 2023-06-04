@@ -1,12 +1,333 @@
 .App {
-  text-align: center;
+  z-index: 1;
+  min-height: 100vh;
+}
+.link-style-remove {
+  text-decoration: none;
+}
+/* z-index */
+.z-1 {
+  z-index: 10;
+}
+.z-99 {
+  z-index: 20;
+}
+.z-999 {
+  z-index: 50;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.top-0 {
+  top: 0;
+}
+.w-full {
+  width: 100%;
+}
+.w-40 {
+  width: 250px;
+}
+.w-5 {
+  width: 50px;
+}
+.w-400 {
+  width: 400px;
+}
+.w-238 {
+  width: 238px;
+}
+/* height */
+.h-screen-full {
+  height: 92.5vh;
 }
 
+/* bg-color */
+.bg-red {
+  background-color: red;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-yellow {
+  background-color: #feefc3;
+}
+.bg-grey {
+  background-color: #eeefef;
+}
+/* colors */
+.logo-yellow {
+  color: #ffd43b;
+}
+.grey-drk {
+  color: #3d3d3d;
+}
+.grey-md {
+  color: #5f6368;
+}
+/* semi-medium */
+.grey-smd {
+  color: #ced4da;
+}
+.border-testing {
+  border: 1px solid black;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.popup-arrow {
+  display: none;
+}
+/* flex */
+.inline-block {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+}
 
+.flex-col {
+  flex-direction: column;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.jc {
+  justify-content: center;
+}
+.jb {
+  justify-content: space-between;
+}
+.jfs {
+  justify-content: flex-start;
+}
+.ac {
+  align-items: center;
+}
+.gap-2 {
+  gap: 2px;
+}
+.gap-4 {
+  gap: 4px;
+}
+.gap-6 {
+  gap: 6px;
+}
+.gap-8 {
+  gap: 8px;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-30 {
+  gap: 20px;
+}
+.m-2 {
+  margin: 2px;
+}
+.m-4 {
+  margin: 4px;
+}
+.m-6 {
+  margin: 6px;
+}
+.m-8 {
+  margin: 8px;
+}
+.m-10 {
+  margin: 10px;
+}
+.mr-2 {
+  margin-right: 2px;
+}
+.mr-4 {
+  margin-right: 4px;
+}
+.mr-6 {
+  margin-right: 6px;
+}
+.mr-8 {
+  margin-right: 8px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-30 {
+  margin-right: 30px;
+}
+/* margin-top */
+.mt-54 {
+  margin-top: 54px;
+}
+.mt-2 {
+  margin-top: 2px;
+}
+.mt-4 {
+  margin-top: 4px;
+}
+.mt-6 {
+  margin-top: 6px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.ml-2 {
+  margin-left: 2px;
+}
+.ml-4 {
+  margin-left: 4px;
+}
+.ml-6 {
+  margin-left: 6px;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.ml-30 {
+  margin-left: 30px;
+}
+.ml-50 {
+  margin-left: 50px;
+}
+.mi-a {
+  margin-inline: auto;
+}
+/* padding */
+.p-2 {
+  padding: 2px;
+}
+.p-4 {
+  padding: 4px;
+}
+.p-6 {
+  padding: 6px;
+}
+.p-8 {
+  padding: 8px;
+}
+.p-10 {
+  padding: 10px;
+}
+.pi-2 {
+  padding-inline: 2px;
+}
+.pi-4 {
+  padding-inline: 4px;
+}
+.pi-6 {
+  padding-inline: 6px;
+}
+.pi-8 {
+  padding-inline: 8px;
+}
+.pi-10 {
+  padding-inline: 10px;
+}
+.pi-20 {
+  padding-inline: 20px;
+}
+
+/* padding-left */
+.pl-2 {
+  padding-left: 2px;
+}
+.pl-4 {
+  padding-left: 4px;
+}
+.pl-6 {
+  padding-left: 6px;
+}
+.pl-8 {
+  padding-left: 8px;
+}
+.pl-10 {
+  padding-left: 10px;
+}
+/* padding-right */
+.pr-2 {
+  padding-right: 2px;
+}
+.pr-4 {
+  padding-right: 4px;
+}
+.pr-6 {
+  padding-right: 6px;
+}
+.pr-8 {
+  padding-right: 8px;
+}
+.pr-10 {
+  padding-right: 10px;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+/* border radius */
+.radius-hover-menu-item {
+  border-radius: 0 120px 120px 0;
+}
+.radius-nohover-menu-item {
+  border-radius: 50%;
+}
+.br-10 {
+  border-radius: 10px;
+}
+/* Box shadow */
+.header-box-shadow {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.sidebar-box-shadow {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.form-box-shadow {
+  box-shadow: 0px 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* test */
+.container {
+  width: 85%;
+  margin-inline: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.note {
+  width: 238px; /* Adjust as needed */
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(32, 32, 32, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  border: 0.5px solid rgb(203, 203, 203);
+}
+.note:hover {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(32, 32, 32, 0.3);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +356,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.word-wrap{
+  word-wrap: break-word;
 }

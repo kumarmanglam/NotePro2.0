@@ -1,0 +1,19 @@
+/* core component */
+/* Text area */
+
+.np-text-area {
+  resize: none;
+  overflow: hidden;
+  min-height: 16px;
+}
+.np-input {
+  font-size: 16px;
+  height: 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.np-input::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+}
