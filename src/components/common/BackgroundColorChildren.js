@@ -4,7 +4,7 @@ import NpToolTip from '../core/Tooltip';
 import Text from '../core/Text';
 
 function BackgroundColorChildren({ colorArray, onclick,selectedColor }) {
-  console.log('hello ', colorArray);
+  // console.log('hello ', colorArray);
   return (
     <div
       className="border-testing"

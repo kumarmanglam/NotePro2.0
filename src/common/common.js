@@ -85,6 +85,11 @@ export const ACTION_BUTTON = {
           label: 'Lime',
           submitKey: 'BgColor--c0eb75',
         },
+        {
+          color: '#ffffff',
+          label: 'White',
+          submitKey: 'BgColor--ffffff',
+        },
       ],
     },
     {
@@ -100,4 +105,12 @@ export const ACTION_BUTTON = {
       submitKey: 'archive',
     },
   ],
+  [PAGE_TYPE.TRASH]: [
+    {
+      type: COMPONENT_TYPE.BUTTON,
+      label: 'DeleteForever',
+      icon: 'DeleteForever',
+      submitKey: 'deleteForever',
+    },
+  ]
 };

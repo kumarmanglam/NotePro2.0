@@ -71,6 +71,10 @@ export const appSlice = createSlice({
         (item) => item?.id === action.payload
       );
     },
+    updateOtherNotes(state, action) {
+      const {id,key,value}=action.payload;
+      state.otherNotes=state.otherNotes?.map(item=>item.id===id?{...item,[key]:value}:item)
+    },
     addPinnedNotes(state, action) {
       state.pinnedNotes = [action.payload, ...state.pinnedNotes];
     },
@@ -79,6 +83,11 @@ export const appSlice = createSlice({
     },
     addTrashedNotes(state, action) {
       state.trashedNotes = [action.payload, ...state.trashedNotes];
+    },
+    removeTrashedNotes(state, action) {
+      state.trashedNotes = state.trashedNotes.filter(
+        (item) => item?.id !== action.payload
+      );
     },
   },
 });
@@ -90,6 +99,8 @@ export const {
   addTrashedNotes,
   removeOtherNotes,
   setOtherSelected,
+  updateOtherNotes,
+  removeTrashedNotes
 } = appSlice.actions;
 
 export default appSlice.reducer;
