@@ -1,53 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  otherNotes: [
-    {
-      id: 1,
-      title: 'fist note',
-      description:
-        'first note desccription should be long loremloremloremloremloremlorem loremloremloremloremloremlorem',
-      backgroundColor: null,
-    },
-    {
-      id: 2,
-      title: 'fist note 2',
-      description:
-        'second note desccription should be long loremloremloremloremloremlorem loremloremloremloremloremlorem',
-      backgroundColor: '#e599f7',
-    },{
-      id: 3,
-      title: 'fist note 2',
-      description:
-        `Coconut- sabut 2
-        Roli and moli - 2
-        Chandan- 1 
-        Madhu chota wala- 1
-        Ghee- 1/2kg
-        Jaw- 1 paw
-        Teel- 100 g
-        Arwa chawal sabut - 2.5kg
-        Supadi - 100 g
-        Rakt chandan- 1
-        Panchmeva
-        Namgrah lakdi
-        Peela sarso - 100 g
-        Teel ka tel - 1/2 kg
-        Haldi - 100g
-        Laal, peela, hara rang
-        Lawa ka Kheer- 100 g
-        Batasha- 100 g
-        
-        Paan ka patta - 10
-        Phool mala- 50 ka rupee
-        5 trah ka fruits
-        5 trah ka mithai
-        Kamaal gatta - 100 g
-        
-        Urad - 100g',
-      backgroundColor: '#e599f7`,
-    },
-  ],
+  otherNotes: [],
   pinnedNotes: [],
   archivedNotes: [],
   trashedNotes: [],
@@ -71,6 +25,25 @@ export const appSlice = createSlice({
         (item) => item?.id === action.payload
       );
     },
+    updateOtherNotes(state, action) {
+      const { id, key, value } = action.payload;
+      state.otherNotes = state.otherNotes?.map((item) =>
+        item.id === id ? { ...item, [key]: value } : item
+      );
+    },
+
+    updateArchivedNotes(state, action) {
+      const { id, key, value } = action.payload;
+      state.archivedNotes = state.archivedNotes?.map((item) =>
+        item.id === id ? { ...item, [key]: value } : item
+      );
+    },
+    updateTrashedNotes(state, action) {
+      const { id, key, value } = action.payload;
+      state.trashedNotes = state.trashedNotes?.map((item) =>
+        item.id === id ? { ...item, [key]: value } : item
+      );
+    },
     addPinnedNotes(state, action) {
       state.pinnedNotes = [action.payload, ...state.pinnedNotes];
     },
@@ -79,6 +52,26 @@ export const appSlice = createSlice({
     },
     addTrashedNotes(state, action) {
       state.trashedNotes = [action.payload, ...state.trashedNotes];
+    },
+    removeTrashedNotes(state, action) {
+      state.trashedNotes = state.trashedNotes.filter(
+        (item) => item?.id !== action.payload
+      );
+    },
+    restoreTrashedNotes(state, action) {
+      state.trashedNotes = state.trashedNotes.filter(
+        (item) => item?.id !== action.payload
+      );
+    },
+    unarchiveNotes(state, action) {
+      state.archivedNotes = state.archivedNotes.filter(
+        (item) => item?.id !== action.payload
+      );
+    },
+    removeArchiveNote(state, action) {
+      state.archivedNotes = state.archivedNotes.filter(
+        (item) => item?.id !== action.payload
+      );
     },
   },
 });
@@ -90,6 +83,13 @@ export const {
   addTrashedNotes,
   removeOtherNotes,
   setOtherSelected,
+  updateOtherNotes,
+  removeTrashedNotes,
+  restoreTrashedNotes,
+  unarchiveNotes,
+  removeArchiveNote,
+  updateArchivedNotes,
+  updateTrashedNotes,
 } = appSlice.actions;
 
 export default appSlice.reducer;
