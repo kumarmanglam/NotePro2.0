@@ -8,6 +8,8 @@ export const ICON_MAP = {
   Archive: () => ICONS.Archive,
   Palette: () => ICONS.Palette,
   DeleteForever: () => ICONS.DeleteForever,
+  Restore: () => ICONS.Restore,
+  Unarchive: () => ICONS.Unarchive,
 };
 
 export const applyMapper = (name) => {

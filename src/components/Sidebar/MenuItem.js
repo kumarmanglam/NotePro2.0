@@ -16,10 +16,12 @@ function MenuItem({ isHovered, label, id, icon, path }) {
       onMouseLeave={() => setIsHoveredId(null)}
     >
       <div
-        className={` flex ac gap-30 p-10 ${isActive ? 'bg-yellow' : ''} 
+        className={` flex ac gap-30 p-10 ${isActive ? 'bg-yellow' : ''} ${
+          isHovered ? 'pl-10' : ''
+        } 
       ${
         isHoveredId === id && !isActive
-          ? 'radius-hover-menu-item pl-10 bg-grey '
+          ? 'radius-hover-menu-item pl-10 bg-grey'
           : ''
       } ${isHovered ? 'radius-hover-menu-item' : 'radius-nohover-menu-item'}`}
       >

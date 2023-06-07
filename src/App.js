@@ -3,13 +3,17 @@ import './App.css';
 import Layout from './components/Layout';
 import RouterContainer from './routes';
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { PersistGate } from 'redux-persist/integration/react';
+
+import { persistor, store } from './store';
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <RouterContainer />
-      </BrowserRouter>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <RouterContainer />
+        </BrowserRouter>
+      </PersistGate>
     </Provider>
   );
 }

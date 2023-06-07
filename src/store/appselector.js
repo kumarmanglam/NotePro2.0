@@ -12,4 +12,9 @@ export const otherNotesSelector = createSelector(
 export const trashNotesSelector = createSelector(
   appStore,
   (store) => store.trashedNotes
-)
+);
+
+export const archiveNotesSelector = createSelector(
+  appStore,
+  (store) => store.archivedNotes
+);

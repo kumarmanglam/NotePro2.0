@@ -3,7 +3,7 @@ import Button from '../core/Button';
 import NpToolTip from '../core/Tooltip';
 import Text from '../core/Text';
 
-function BackgroundColorChildren({ colorArray, onclick,selectedColor }) {
+function BackgroundColorChildren({ colorArray, onclick, selectedColor }) {
   // console.log('hello ', colorArray);
   return (
     <div
@@ -21,7 +21,8 @@ function BackgroundColorChildren({ colorArray, onclick,selectedColor }) {
             id={colorObject?.submitKey}
             style={{
               backgroundColor: colorObject?.color,
-              border:selectedColor===colorObject?.color?"1px solid black":"",
+              border:
+                selectedColor === colorObject?.color ? '1px solid black' : '',
               width: 20,
               height: 20,
               borderRadius: '100%',

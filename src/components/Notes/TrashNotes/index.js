@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { PAGE_TYPE } from '../../../common/common';
 
 function TrashNotes() {
-  const trashNotes=useSelector(trashNotesSelector);
+  const trashNotes = useSelector(trashNotesSelector);
   return (
     <div className="container">
       <ResponsiveMasonry
@@ -14,7 +14,14 @@ function TrashNotes() {
       >
         <Masonry columnsCount={5} gutter="10px">
           {trashNotes.map((data) => (
-            <Card pageType={PAGE_TYPE.TRASH} key={data.id} id={data.id} title={data.title} description={data.description} backgroundColor={data.backgroundColor}/>
+            <Card
+              pageType={PAGE_TYPE.TRASH}
+              key={data.id}
+              id={data.id}
+              title={data.title}
+              description={data.description}
+              backgroundColor={data.backgroundColor}
+            />
           ))}
         </Masonry>
       </ResponsiveMasonry>
@@ -22,4 +29,4 @@ function TrashNotes() {
   );
 }
 
-export default TrashNotes
+export default TrashNotes;

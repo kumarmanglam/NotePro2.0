@@ -2,6 +2,7 @@ import React from 'react';
 import Icon from '../core/Icon';
 import Text from '../core/Text';
 import Button from '../core/Button';
+import GlobalModal from '../core/GlobalModal';
 
 function Header({ onHeaderMenuClick }) {
   return (
@@ -17,6 +18,7 @@ function Header({ onHeaderMenuClick }) {
         <Text label="NotePro" classes="text-lg font-medium grey-md" />
         <Text label="v2" classes="text-xs font-normal grey-smd" />
       </div>
+      <GlobalModal />
     </div>
   );
 }
