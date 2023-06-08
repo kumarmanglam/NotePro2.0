@@ -10,7 +10,7 @@ function RouterContainer() {
   return (
     <Routes>
       <Route path={'/'} element={<Layout />}>
-        <Route path="*" element={<Navigate to={ROUTES.notes.pathname}/>}/>
+        <Route path="/" element={<Navigate to={ROUTES.notes.pathname}/>}/>
         <Route path={ROUTES.notes.pathname} element={<NotesPage />} />
         <Route path={ROUTES.archive.pathname} element={<ArchivePage />} />
         <Route path={ROUTES.trash.pathname} element={<TrashPage />} />
