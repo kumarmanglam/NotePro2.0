@@ -6,7 +6,7 @@ import GlobalModal from '../core/GlobalModal';
 
 function Header({ onHeaderMenuClick }) {
   return (
-    <div className="flex fixed top-0 ac p-10 gap-10 header-box-shadow  z-999 w-full jfs">
+    <div className="flex fixed top-0 ac p-10 gap-10 border-bottom  z-999 w-full jfs">
       <Button
         icon="Menu"
         size="large"

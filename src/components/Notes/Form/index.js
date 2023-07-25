@@ -31,22 +31,20 @@ function Form({ istoggleable = false }) {
   useOnClickOutside(wrapperRef, istoggleable ? () => onSubmit() : () => {});
 
   return (
-    <div
-      ref={wrapperRef}
-      className=" w-400 mi-a mt-30 p-10 br-10 pi-20 form-box-shadow"
-    >
+    <div ref={wrapperRef} className=" w-400 mi-a mt-30  br-10  form-box-shadow">
       {isDescActive && istoggleable ? (
         <Input
           value={title}
           onChange={(e) => setTitle(e?.target?.value)}
           variant="text"
           placeholder="Title"
+          wrapperClasses="form-input"
         />
       ) : null}
       <Input
         value={description}
         onChange={(e) => setDescription(e?.target?.value)}
-        wrapperClasses="mt-10"
+        wrapperClasses="mt-10 mb-10 form-input"
         variant="textArea"
         placeholder="Take a note..."
         onClick={istoggleable ? () => setIsDescActive(true) : () => {}}

@@ -32,7 +32,7 @@ function Sidebar({ isMenuClicked }) {
     <div
       className={`pt-10 bg-white  ${
         isHover ? 'w-40' : 'w-5 pi-10 '
-      } sidebar-box-shadow h-screen-full z-99 fixed `}
+      }  h-screen-full z-99 fixed border-right`}
       onMouseEnter={() => toggleIsHover(true)}
       onMouseLeave={() => toggleIsHover(false)}
     >

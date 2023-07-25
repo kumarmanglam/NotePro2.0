@@ -62,9 +62,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 9999;
+  height: min-content;
 }
 .w-full {
   width: 100%;
@@ -139,6 +139,9 @@
 }
 .border-testing {
   border: 1px solid black;
+}
+.border-grey {
+  border: 1px solid grey;
 }
 .App-logo {
   height: 40vmin;
@@ -372,10 +375,26 @@
 .sidebar-box-shadow {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-.form-box-shadow {
-  box-shadow: 0px 0 5px 5px rgba(0, 0, 0, 0.1);
+.border-right {
+  border-right: 1px solid rgb(220, 220, 220);
 }
-
+.border-bottom {
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.form-box-shadow {
+  box-shadow: 0px 0 5px 5px rgba(86, 75, 75, 0.1);
+  border: 1px solid grey;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal {
+  background-color: red;
+}
+.form-input {
+  padding: 4px;
+}
 /* test */
 .container {
   width: 85%;
